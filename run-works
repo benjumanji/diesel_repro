@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cmd="cd /root && cp -r host-src src && cd src"
+cmd="$cmd && cargo build -v --release --target=armv7-unknown-linux-gnueabihf"
+docker run --rm -it -v "$(pwd)/works":/root/host-src \
+  artfuldodge/debian-cross-rust-build-base:0.16.0 bash -i -c "$cmd"

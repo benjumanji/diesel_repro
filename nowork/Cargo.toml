@@ -1,0 +1,9 @@
+[package]
+name = "nowork"
+version = "0.1.0"
+authors = ["Ben Edwards <ben@artfuldodge.io>"]
+edition = "2018"
+
+[dependencies]
+diesel = {version = "1.4", default-features = false, features = ["sqlite"]}
+diesel_migrations = {version = "1.4", default-features = false, features = ["sqlite"]}
